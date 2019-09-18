@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - 10
+
+sudo: false
+
+services:
+  - docker
+
+script:
+  - docker build -t akshaysachdeva1234/frontend .
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master

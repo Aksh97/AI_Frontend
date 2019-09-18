@@ -1,6 +1,6 @@
 {
     "/api":{
-        "target":"http://localhost:8080/stock-predict/rest",
+        "target":"http://54.152.194.151:8080/stock-predict/rest",
         "secure":false,
         
         "logLevel": "debug",
