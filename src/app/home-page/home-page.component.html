@@ -8,38 +8,42 @@
             </ul>
         </nav>
     </div>
-
+<table>
+    <tr><td>
     <div class="card cardForm">
         <div class="card-body">
             <form class="Formclass container form-group" >
                 <div class="form-group">
+                    <table>
+                        <tr>
+                            <td>
 
-                    <label for="companyName"><b>Choose Company</b></label>
+                    <label for="companyName"><font size="+2"><b>Choose Company</b></font></label>
                     <select class="form-control ddlist" id="compName" name="compName" size="8" [(ngModel)]="compName">
                         <option *ngFor="let comd of companyDetails" [ngValue]="comd.fullName">{{comd.fullName}}</option>
 
                     </select>
 
+                </td>
+                <td> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</td>
+                
+                <td>
+                        
+
+                
+                </td>
+                </tr>
+
+
+                </table>
+                
+
+                    
                 </div>
 
 
 
-            <!-- <div class="form-group ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="dateFrom">Date From</label>
-                                <input id="dateFrom" name="dateFrom" type="date" class="form-control dateClass">
-                            </div>
-
-                            <div class="col-md-*">
-                                <label for="dateTo">Date To</label>
-                                <input id="dateTo" name="dateTo" type="date" class="form-control dateClass">
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
+            
                 <div>
                 <label id="error" style="color:red">{{error}}</label>
                 </div>
@@ -49,25 +53,47 @@
         </div>
 
     </div>
+</td>
+<td> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</td>
+<td>
+        <div class="card " style="margin-right: -71px !important; width:30rem; margin-left:10%; height:23rem">
+            <div style="margin-top:10px ;margin-left: 135px !important"><font size="+2"><b>Next Day's Trend</b></font></div>
+            <table>
+                <tr><td>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                
+                <tr>
+                    <td>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                <img style ="margin-right: -71px !important;" src= {{trendImage}} > 
+            </td>
+            </tr>
+            </table>
+        </div>
 
-    <div class="card" style="width:30rem; margin-left:10%; height: auto">
+</td>
+</tr>
+</table>
+<table>
+    <div class="card" style="width:40rem; margin-left:10%; height: auto">
 
 
         <div class="card-body">
-            <div class="card-title"><b>Prediction</b></div>
+            <div class="card-title"><font size="+2"><b>Prediction</b></font></div>
             <table>
                 <tr>
                     <td>Trend:</td>
                 
-                <td >
+                <td ><b>
                     {{trend}}
+                </b>
                 </td>
                 </tr>
                 <tr>
                     <td>Confidence:</td>
                 
-                <td >
+                <td ><b>
                     {{confidence}}
+                </b>
                 </td>
             </tr>
             </table>
@@ -77,5 +103,6 @@
         </div>
 
     </div>
+</table>
 
 </div>
