@@ -21,7 +21,6 @@ export class HomePageComponent implements OnInit {
   trend
   confidence
   error="select the company name"
-  trendImage="../assets/default_new.jpg"
 x
   orgSymbol
   constructor(private router: Router, private commservice: CommService, private cookie: CookieService) { }
@@ -67,13 +66,13 @@ x
         console.log("b4");
         this.addRecordToPredictionList(data);
         console.log("after");
-        //this.graph(this.orgSymbol)
       }
     );
     }
-  }
 
-  
+
+
+  }
   public addRecordToPredictionList(record) {
     this.prediction=record;
     if(this.prediction["trend"]==null)
@@ -83,31 +82,8 @@ x
       this.trend=this.prediction["trend"]
     }
     
-    this.confidence=Math.round( this.prediction["confidence"] *100)/100
+    this.confidence=this.prediction["confidence"]
 
-    if(this.trend='up'){
-      this.trendImage="../assets/uptrend_new.jpg"
-    }
-    else
-    this.trendImage="../assets/downtrend_new.jpg"
-
-  }
-
-
-
-  public graph(symbol){
-    this.commservice.getHistory(symbol).subscribe(
-      data => {
-              this.dataHandler(data);
-      }
-
-    );
-  }
-
-  public dataHandler(data)
-  {
-
-    let first=data[0]
   }
 
 }
