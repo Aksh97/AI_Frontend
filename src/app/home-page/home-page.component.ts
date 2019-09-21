@@ -85,7 +85,7 @@ x
     
     this.confidence=Math.round( this.prediction["confidence"] *100)/100
 
-    if(this.trend='up'){
+    if(this.trend =='up'){
       this.trendImage="../assets/uptrend_new.jpg"
     }
     else
